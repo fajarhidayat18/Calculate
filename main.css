@@ -1,0 +1,89 @@
+:root{
+    --primary-color:#008dff;
+    --shadow-color:#0071cc;
+    --shadow-light-color:#009eff;
+    --text-color:#fff;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: var(--primary-color);
+}
+.contain-calc{
+    max-width: 560px;
+    padding: 2rem;
+    position: relative;
+    border-radius: 16px;
+    background: var(--primary-color);
+    box-shadow:  16px 16px 32px var(--shadow-color),
+                -16px -16px 32px var(--shadow-light-color);
+}
+.screen-calc{
+    padding: 1.7rem 1rem ;
+    width: 100%;
+    border: none;
+    text-align: right;
+    font-size: 2rem;
+    color: var(--text-color);
+    font-weight: bold;
+    border-radius: 13px;
+    background: var(--primary-color);
+    box-shadow: inset 6px 6px 12px var(--shadow-color),
+                inset -6px -6px 12px var(--shadow-light-color);
+}
+.screen-calc::placeholder{
+    color: var(--text-color);
+}
+.screen-calc:focus{
+    outline: none;
+}
+.keys-calc{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    align-items: center;
+    gap: 10px;
+    margin-top: 12px;
+}
+.key-cap{
+    font-weight: bold;
+    border-radius: 12px;
+    background: var(--primary-color);
+    box-shadow:  5px 5px 9px var(--shadow-color),
+                 -5px -5px 9px var(--shadow-light-color);
+}
+.key-cap:hover{
+    border-radius: 12px;
+    background: linear-gradient(145deg, var(--primary-color), #0077e6);
+    box-shadow:  5px 5px 10px var(--shadow-color),
+                -5px -5px 10px var(--shadow-light-color);
+}
+.key-cap:active{
+    border-radius: 12px;
+    background: linear-gradient(145deg, #0077e6, var(--primary-color));
+    box-shadow:  5px 5px 10px var(--shadow-color),
+                -5px -5px 10px var(--shadow-light-color);
+}
+.key{
+    color: var(--text-color);
+    font-size: 1.25rem;
+    height: 100%;
+    padding: 1.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    width: 100%;
+}
+.equal-sign{
+    grid-area: 4/4/span 2;
+    align-self: stretch;
+}
